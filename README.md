@@ -30,8 +30,15 @@
 - ⬜ 實作「自建封裝」(Custom Footprint)，根據 Datasheet 尺寸精密計算焊盤 (Pad) 大小、間距 (Pitch) 與邊界線 (Courtyard)
 
 ### 3. 電路板佈線 (PCB Layout)
-- ⬜ 將原理圖設計正確導入 PCB 編輯器中
-- ⬜ 在 `Edge.Cuts` 層定義精確的電路板尺寸與板框
+- ✅ 將原理圖設計正確導入 PCB 編輯器中
+  > 實作筆記：
+  > 1. 在原理圖中按下快捷鍵 'F8' 就可以把零件實體化傳送到 PCB 世界。
+  > 2. 剛傳過去時零件會黏在滑鼠上，在畫面點一下左鍵就可以把它們放出來。
+
+- ✅ 在 `Edge.Cuts` 層定義精確的電路板尺寸與板框
+  > 實作筆記：
+  > 1. ★★★ 畫板框前，右邊圖層一定要切換到 'Edge.Cuts' 層（通常是黃色的）。如果用別層畫，工廠會不知道從哪裡切板子！
+  > 2. 選好圖層後，使用右側的「繪製矩形」工具在零件周圍畫一個框，這就是板子的邊界。
 - ⬜ 設定符合生產工廠規範的「設計規則」(Constraints / Design Rules)，如線寬 (Track Width) 與安全間距 (Clearance)
 - ⬜ 實作去耦電容 (Decoupling Capacitor)「盡量靠近晶片電源腳」的佈局規範
 - ⬜ 實作大面積 GND 鋪銅 (Copper Pour / Zone) 與設定熱焊盤 (Thermal Relief)
