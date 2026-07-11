@@ -1,5 +1,4 @@
-![NE555 LED Blinker 3D Render](./Project_01_First_LED.png)
-↑第一個作品↑
+
 
 # Learning-KiCad-Projects
 你好！我是 柯宇鴻，這是用來記錄我從零開始學習 KiCad PCB 設計的 GitHub 倉庫。
@@ -83,6 +82,8 @@
   > 1. 按下快捷鍵 'Alt+3' 可以開啟 3D 查看器。
   > 2. ★★★ 機構驗證重點：不只是好看，更重要的是在送去工廠前，確認電感、電容、排針實體高度會不會跟板框或外殼卡到（進行機構干涉檢查）。
 - 如果有更新原圖，可以按圖是(更新PCB進行放置新元件)
+![NE555 LED Blinker 3D Render](./Project_01_First_LED.png)
+↑第一個作品↑
 
 ### 4. 生產製造輸出 (Manufacturing & DFM)
 - ✅ 導出符合工廠打樣標準的 Gerber 光繪檔與鑽孔檔 (Drill files)
