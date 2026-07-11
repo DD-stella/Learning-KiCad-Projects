@@ -25,8 +25,17 @@
   > 2. 點擊「執行 ERC」，只要「違規」頁籤顯示為 **(0)** 即代表完全通過。
 
 ### 2. 元件庫管理與自建元件 (Library Management)
-- ⬜ 學會閱讀晶片數據手冊 (Datasheet)，理解引腳定義與電氣屬性
-- ⬜ 實作「自建電路圖符號」(Custom Symbol)，手動繪製晶片符號並設定 Pin Type (Input/Output/Power)
+- ✅ 學會閱讀晶片數據手冊 (Datasheet)，理解引腳定義與電氣屬性
+  > 實作筆記：
+  > 1. 畫晶片的第一步絕對是查 Datasheet 確認引腳功能(例如 NE555 讓 LED 閃爍的電路中，Pin 1 是 GND、Pin 8 是 VCC、Pin 3 是 OUT)。
+  > 2. ★★★ 註：如果要參考 Datasheet 的詳細設計與封裝規範，請以 [HackMD 講義](https://hackmd.io/@Ethan2339/S1SOPAPhC) 網站裡的標準為主。
+
+- ✅ 實作「自建電路圖符號」(Custom Symbol)，手動繪製晶片符號並設定 Pin Type (Input/Output/Power)
+  > 實作筆記：
+  > 1. 建立新圖庫並在「管理符號庫」掛載時，路徑一定要選 `${KIPRJMOD}` 開頭的「相對路徑」！
+  > 2. ★★★ 如果留著 `C:\...` 開頭的絕對路徑，換台電腦或上傳 GitHub 後，系統會去別人的 C 槽找檔案，絕對會大翻車「查無此零件」，而且系統也會查不到。
+  > 3. ★★★在畫晶片接腳(按 'P')時，端點小圓圈要朝外(那是用來接線的)。
+  > 4. 「電氣類型」一定要照 Datasheet 乖乖選（例如 VCC 和 GND 要選 Power Input）。亂選的話，畫完電路圖按 ERC 會被錯誤訊息淹沒。
 - ⬜ 實作「自建封裝」(Custom Footprint)，根據 Datasheet 尺寸精密計算焊盤 (Pad) 大小、間距 (Pitch) 與邊界線 (Courtyard)
 
 ### 3. 電路板佈線 (PCB Layout)
